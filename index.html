@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Is Your Workplace Emotionally Intelligent? | The LEAD Workplace EQ Audit</title>
+<meta name="description" content="A free 5-minute self-check by Dr. Dale Laing-Hall of Dale Reports. Score your workplace across Learn, Empower, Align and Drive, and get your results by email.">
+<meta property="og:title" content="Is your workplace emotionally intelligent?">
+<meta property="og:description" content="Take Dr. Dale's free LEAD Workplace EQ Audit: 20 questions, 5 minutes, results in your inbox.">
+<meta property="og:image" content="logo.png">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#FFFFFF; --surface:#F2F5FB; --ink:#18223A; --muted:#55607A; --line:#D9E0EE;
+  --blue:#2B5291; --blue-2:#316DA7; --gold:#DFB160; --gold-soft:#F6ECD6;
+  --green:#4F8A3C; --amber:#B7791F; --red:#B4483B; --on-blue:#FFFFFF;
+  --display:"Sora","Segoe UI",system-ui,sans-serif; --body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6}
+.wrap{max-width:46rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.2;text-wrap:balance;margin:0}
+p{margin:0}
+.hero{background:var(--blue);color:var(--on-blue);padding-bottom:2.5rem}
+.topbar{display:flex;align-items:center;padding:12px max(16px,env(safe-area-inset-right,0px)) 0 max(16px,env(safe-area-inset-left,0px));padding-top:calc(12px + env(safe-area-inset-top,0px))}
+.logo{width:4.75rem;height:auto;background:#FFFFFF;border-radius:14px;padding:.3rem;box-shadow:0 2px 10px rgba(0,0,0,.18);display:block}
+.hero .wrap{display:grid;gap:1rem;padding-top:1.25rem}
+.eyebrow{font-family:var(--display);font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-size:clamp(1.9rem,5vw,2.8rem);font-weight:700}
+.hero p{max-width:38rem;opacity:.95}
+.lead-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem;margin-top:.5rem}
+.lead-row div{border:1px solid rgba(255,255,255,.35);border-radius:10px;padding:.65rem .75rem;min-width:0}
+.lead-row b{display:block;font-family:var(--display);font-size:1.5rem;color:var(--gold);line-height:1}
+.lead-row span{font-size:.9rem}
+main{padding-block:2rem 3rem}
+.panel{display:grid;gap:1.25rem}
+.intro-list{display:grid;gap:.4rem;padding-left:1.1rem;margin:0;color:var(--muted)}
+form.card{background:var(--surface);border-radius:16px;padding:1.5rem;display:grid;gap:1rem}
+.field{display:grid;gap:.35rem}
+.field label{font-weight:600}
+.field label small{font-weight:400;color:var(--muted)}
+.field input{font:inherit;padding:.75rem .9rem;border:1.5px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);width:100%}
+.field input:focus{outline:3px solid var(--gold);outline-offset:1px;border-color:var(--blue)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.consent{font-size:.9rem;color:var(--muted)}
+.err{color:var(--red);font-size:.95rem}
+.btn{font:600 1rem var(--display);border:0;border-radius:999px;padding:.85rem 1.4rem;cursor:pointer;background:var(--blue);color:var(--on-blue);justify-self:start}
+.btn:hover{background:var(--blue-2)}
+.btn.ghost{background:transparent;color:var(--blue);border:1.5px solid var(--blue)}
+.btn:focus-visible,.opt:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.row{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center}
+.progress{display:grid;gap:.4rem}
+.progress .meta{display:flex;justify-content:space-between;font-size:.9rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.bar{height:8px;background:var(--surface);border-radius:999px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--gold);width:0;transition:width .3s}
+.qcard{background:var(--surface);border-radius:16px;padding:1.5rem;display:grid;gap:1.25rem}
+.pill{justify-self:start;font:600 .8rem var(--display);letter-spacing:.06em;text-transform:uppercase;color:var(--blue);background:var(--bg);border:1px solid var(--line);padding:.3rem .7rem;border-radius:999px}
+.qcard h2{font-size:clamp(1.25rem,3.4vw,1.55rem);font-weight:600}
+.opts{display:grid;gap:.5rem}
+.opt{display:flex;gap:.75rem;align-items:center;text-align:left;width:100%;font:500 1rem var(--body);color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:.75rem 1rem;cursor:pointer}
+.opt:hover{border-color:var(--blue)}
+.opt[aria-pressed="true"]{border-color:var(--blue);background:#E7EEF8}
+.opt .n{flex:none;width:1.9rem;height:1.9rem;border-radius:50%;display:grid;place-items:center;font:600 .9rem var(--display);background:var(--surface);color:var(--blue)}
+.opt[aria-pressed="true"] .n{background:var(--blue);color:var(--on-blue)}
+.sent{background:#EAF3E6;color:#2F5D22;border-radius:12px;padding:.9rem 1.1rem}
+.sent.wait{background:var(--surface);color:var(--muted)}
+.score-head{display:grid;gap:.75rem;background:var(--surface);border-radius:16px;padding:1.5rem}
+.big{display:flex;align-items:baseline;gap:.5rem;font-family:var(--display);font-variant-numeric:tabular-nums}
+.big b{font-size:3.2rem;line-height:1;color:var(--blue)}
+.big span{color:var(--muted)}
+.band{justify-self:start;font:700 .85rem var(--display);letter-spacing:.08em;text-transform:uppercase;padding:.35rem .8rem;border-radius:999px;color:#FFFFFF}
+.band.emerging{background:var(--red)} .band.growing{background:var(--amber)} .band.thriving{background:var(--green)}
+.pillars{display:grid;gap:1rem}
+.pillar{border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.2rem;display:grid;gap:.6rem}
+.pillar-top{display:flex;justify-content:space-between;gap:1rem;align-items:baseline}
+.pillar h3{font-size:1.1rem}
+.pillar h3 em{font-style:normal;color:#B8892F;margin-right:.35rem}
+.pillar .pct{font:600 1rem var(--display);font-variant-numeric:tabular-nums;color:var(--muted)}
+.pillar .bar i{background:var(--blue)}
+.pillar .next strong{color:var(--blue)}
+.cta{background:var(--gold-soft);border-radius:16px;padding:1.5rem;display:grid;gap:.9rem}
+.cta h2{font-size:1.35rem}
+.cta a.btn{text-decoration:none;display:inline-block}
+.note{font-size:.88rem;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding-block:1.5rem 2.5rem;font-size:.88rem;color:var(--muted)}
+footer .wrap{display:grid;gap:.4rem}
+footer a{color:var(--blue)}
+[hidden]{display:none!important}
+@media (max-width:560px){.lead-row{grid-template-columns:repeat(2,minmax(0,1fr))}.two{grid-template-columns:1fr}.qcard,form.card{padding:1.1rem}}
+@media (prefers-reduced-motion:reduce){.bar i{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="topbar"><a href="https://www.dalereports.com" target="_blank" rel="noopener" aria-label="Dale Reports home"><img class="logo" src="logo.png" alt="Dale Reports" width="321" height="364"></a></div>
+  <div class="wrap">
+    <span class="eyebrow">The LEAD Workplace EQ Audit · by Dr. Dale</span>
+    <h1>Is your workplace emotionally intelligent?</h1>
+    <p>Emotional intelligence is not only about people. It is also about the environment around them: the culture, the habits and the unwritten rules that decide whether people thrive or quietly leave. This 5-minute self-check looks at both.</p>
+    <div class="lead-row" aria-label="The four parts of the LEAD framework">
+      <div><b>L</b><span>Learn Emotional Intelligence</span></div>
+      <div><b>E</b><span>Empower</span></div>
+      <div><b>A</b><span>Align with Purpose</span></div>
+      <div><b>D</b><span>Drive Positive Impact</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="start" class="panel">
+    <h2>Get your results in your inbox</h2>
+    <ul class="intro-list">
+      <li>20 short statements, five for each part of LEAD.</li>
+      <li>Answer for your workplace as it is today.</li>
+      <li>See your score right away, and get a copy by email with one next step for each part.</li>
+    </ul>
+    <form class="card" id="who" novalidate>
+      <div class="two">
+        <div class="field"><label for="name">First name</label><input id="name" name="name" autocomplete="given-name" maxlength="60" required></div>
+        <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" maxlength="120" required></div>
+      </div>
+      <div class="two">
+        <div class="field"><label for="org">Organization <small>(optional)</small></label><input id="org" name="org" autocomplete="organization" maxlength="100"></div>
+        <div class="field"><label for="role">Your role <small>(optional)</small></label><input id="role" name="role" autocomplete="organization-title" maxlength="80"></div>
+      </div>
+      <div class="hp" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+      <p class="consent">By starting, you agree that Dale Reports may email you your results and occasional leadership insights. Unsubscribe any time by replying "unsubscribe". We never sell or share your information.</p>
+      <p class="err" id="err" hidden></p>
+      <button class="btn" type="submit">Start the audit</button>
+    </form>
+  </section>
+
+  <section id="quiz" class="panel" hidden>
+    <div class="progress">
+      <div class="meta"><span id="qcount">Question 1 of 20</span><span id="qpart"></span></div>
+      <div class="bar"><i id="qbar"></i></div>
+    </div>
+    <div class="qcard">
+      <span class="pill" id="qpill"></span>
+      <h2 id="qtext"></h2>
+      <div class="opts" id="opts" role="group" aria-labelledby="qtext"></div>
+    </div>
+    <div class="row"><button class="btn ghost" id="back" type="button">Back</button></div>
+  </section>
+
+  <section id="results" class="panel" hidden>
+    <p class="sent wait" id="sent">Sending your results to your inbox…</p>
+    <div class="score-head">
+      <span class="eyebrow" style="color:var(--blue)">Your LEAD Workplace EQ Score</span>
+      <div class="big"><b id="total">0</b><span>out of 100</span></div>
+      <span class="band" id="band"></span>
+      <p id="bandtext"></p>
+    </div>
+    <div class="pillars" id="pillars"></div>
+    <div class="cta">
+      <h2>Want to talk through your results?</h2>
+      <p>Bring your score to a short, no-pressure conversation with Dr. Dale Laing-Hall. You will leave with one clear place to start, whether or not we work together.</p>
+      <div class="row"><a class="btn" href="https://calendly.com/dalereports/30min" target="_blank" rel="noopener">Book a conversation</a></div>
+      <p class="note">Questions? Email info@dalereports.com · <a href="https://www.dalereports.com" target="_blank" rel="noopener">www.dalereports.com</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>The LEAD Workplace EQ Audit is a self-check created by Dr. Dale Laing-Hall, DBA, MS-HRM, SHRM-CP, founder of Dale Reports, LLC. It is a starting point for conversation, not a validated psychological assessment.</p>
+    <p>Privacy: we collect only what you type here (name, email, optional organization and role, and your answers) to send your results and follow up. We do not sell or share it. To be removed, reply "unsubscribe" to any email from us.</p>
+    <p>© 2026 Dale Reports, LLC. LEAD: Learn Emotional Intelligence · Empower · Align with Purpose · Drive Positive Impact.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Google Apps Script web app that emails results and records the lead (in Dr. Dale's Google account).
+  var ENDPOINT = "REPLACE_WITH_APPS_SCRIPT_URL";
+
+  var PARTS=[{key:"L",name:"Learn Emotional Intelligence",short:"Learn"},{key:"E",name:"Empower",short:"Empower"},{key:"A",name:"Align with Purpose",short:"Align"},{key:"D",name:"Drive Positive Impact",short:"Drive"}];
+  var Q=[
+    ["L","Leaders here can name what they are feeling under pressure before they react."],
+    ["L","People can talk about stress or frustration at work without being seen as weak."],
+    ["L","Our managers have had real, ongoing training in emotional intelligence, not just a one-time workshop."],
+    ["L","When someone's behavior changes (late, quiet, short-tempered), a leader notices and asks."],
+    ["L","We treat emotions as information about what is happening, not as a problem to shut down."],
+    ["E","People can disagree with a leader without fear of payback."],
+    ["E","Employees can make decisions in their own area without approval for everything."],
+    ["E","Feedback flows both ways: staff give leaders feedback, and leaders act on it."],
+    ["E","Mistakes are treated as learning, not as a reason to blame."],
+    ["E","Our managers coach more than they correct."],
+    ["A","Most people here can explain how their work connects to our mission."],
+    ["A","What leaders say we value matches how decisions actually get made."],
+    ["A","People are recognized for how they get results, not only for the results."],
+    ["A","Our workload and policies leave room for people to have a life outside work."],
+    ["A","New hires feel welcomed and know where they belong within their first 90 days."],
+    ["D","Hard conversations happen early, before small issues become big ones."],
+    ["D","When people leave, we learn why and change something because of it."],
+    ["D","Teams recover from conflict and still work well together."],
+    ["D","We track how people are doing (engagement, burnout, turnover), not only output."],
+    ["D","People here would recommend this workplace to a friend."]
+  ];
+  var SCALE=["Never","Rarely","Sometimes","Often","Always"];
+  var NEXT={
+    L:{low:"Start with language. Give leaders a shared way to name what they feel before they react. A short daily check-in (one word for how you are arriving) builds the habit.",mid:"Awareness is there, but it is uneven. Move from one-time training to practice: managers using a simple pause-and-name step in real meetings.",high:"Your leaders read the room well. Keep it alive by making emotional check-ins part of how meetings open, not an extra."},
+    E:{low:"People are waiting for permission. Pick one decision your team can own fully this month, and protect the first person who speaks up with a disagreement.",mid:"Voice exists in pockets. Ask your team, \"What is one thing I could do differently?\" and act on one answer visibly.",high:"People feel trusted to act. Grow it by turning your strongest contributors into coaches for others."},
+    A:{low:"Say and do are drifting apart. Name one value and check your last three big decisions against it, out loud, with your team.",mid:"Purpose is understood at the top more than on the floor. Connect each role to one real outcome it makes possible.",high:"Your purpose is lived, not just posted. Protect it during busy seasons, when workload is the first thing to quietly break alignment."},
+    D:{low:"Problems are arriving late and leaving quietly. Start one honest practice: a stay conversation with each team member before anyone leaves.",mid:"You recover, but slowly. Shorten the gap between noticing an issue and talking about it. Name the fact, then ask, \"What is your read on this?\"",high:"You turn hard moments into progress. Share how you do it, so the habit survives turnover and growth."}
+  };
+  var BANDS=[
+    {min:75,cls:"thriving",label:"Thriving",text:"Your workplace shows the habits of an emotionally intelligent culture. People are seen, heard and trusted. The work now is protecting what you have as you grow."},
+    {min:50,cls:"growing",label:"Growing",text:"The foundation is there, and some of it is strong. Gaps in one or two parts of LEAD are likely costing you energy, trust or people. Small, steady changes will move you quickly."},
+    {min:0,cls:"emerging",label:"Emerging",text:"Your people are probably carrying more than your culture is supporting. That is common, and it is fixable. Start with the lowest part below; one change there tends to lift the rest."}
+  ];
+
+  var answers=new Array(Q.length).fill(null), i=0, who=null;
+  var $=function(id){return document.getElementById(id);};
+  function show(id){["start","quiz","results"].forEach(function(s){$(s).hidden=(s!==id);});window.scrollTo(0,0);}
+  function partOf(k){return PARTS.filter(function(p){return p.key===k;})[0];}
+
+  $("who").addEventListener("submit",function(ev){
+    ev.preventDefault();
+    var name=$("name").value.trim(), email=$("email").value.trim();
+    var err=$("err");
+    if(!name){err.textContent="Please enter your first name.";err.hidden=false;$("name").focus();return;}
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){err.textContent="Please enter a valid email so we can send your results.";err.hidden=false;$("email").focus();return;}
+    err.hidden=true;
+    who={name:name,email:email,org:$("org").value.trim(),role:$("role").value.trim(),website:$("website").value};
+    answers=new Array(Q.length).fill(null); i=0;
+    show("quiz"); renderQ();
+  });
+
+  function renderQ(){
+    var q=Q[i], p=partOf(q[0]);
+    $("qcount").textContent="Question "+(i+1)+" of "+Q.length;
+    $("qpart").textContent=p.key+" · "+p.short;
+    $("qbar").style.width=(i/Q.length*100)+"%";
+    $("qpill").textContent=p.key+" — "+p.name;
+    $("qtext").textContent=q[1];
+    var box=$("opts"); box.innerHTML="";
+    SCALE.forEach(function(label,v){
+      var b=document.createElement("button");
+      b.type="button"; b.className="opt"; b.id="opt-"+(v+1);
+      b.setAttribute("aria-pressed",answers[i]===v+1?"true":"false");
+      var n=document.createElement("span"); n.className="n"; n.textContent=String(v+1);
+      var t=document.createElement("span"); t.textContent=label;
+      b.appendChild(n); b.appendChild(t);
+      b.addEventListener("click",function(){pick(v+1);});
+      box.appendChild(b);
+    });
+    $("back").hidden=(i===0);
+  }
+  function pick(v){answers[i]=v; if(i<Q.length-1){i++;renderQ();}else{$("qbar").style.width="100%";finish();}}
+  $("back").addEventListener("click",function(){if(i>0){i--;renderQ();}});
+
+  function scores(){
+    var per={}; PARTS.forEach(function(p){per[p.key]={sum:0,n:0};});
+    Q.forEach(function(q,k){per[q[0]].sum+=answers[k];per[q[0]].n++;});
+    var out={},all=0,cnt=0;
+    PARTS.forEach(function(p){var s=per[p.key];out[p.key]=Math.round((s.sum-s.n)/(s.n*4)*100);all+=s.sum;cnt+=s.n;});
+    out.total=Math.round((all-cnt)/(cnt*4)*100); return out;
+  }
+  function level(p){return p>=75?"high":p>=50?"mid":"low";}
+
+  function finish(){
+    var s=scores(), band=BANDS.filter(function(b){return s.total>=b.min;})[0];
+    $("total").textContent=s.total;
+    var bEl=$("band"); bEl.textContent=band.label; bEl.className="band "+band.cls;
+    $("bandtext").textContent=band.text;
+    var lowest=PARTS.slice().sort(function(a,b){return s[a.key]-s[b.key];})[0].key;
+    var box=$("pillars"); box.innerHTML="";
+    PARTS.forEach(function(p){
+      var pct=s[p.key], el=document.createElement("div"); el.className="pillar";
+      var top=document.createElement("div"); top.className="pillar-top";
+      var h=document.createElement("h3"); var em=document.createElement("em"); em.textContent=p.key; h.appendChild(em); h.appendChild(document.createTextNode(p.name));
+      var pc=document.createElement("span"); pc.className="pct"; pc.textContent=pct+"%";
+      top.appendChild(h); top.appendChild(pc);
+      var bar=document.createElement("div"); bar.className="bar"; var fill=document.createElement("i"); fill.style.width=pct+"%"; bar.appendChild(fill);
+      var nx=document.createElement("p"); nx.className="next";
+      if(p.key===lowest){var st=document.createElement("strong"); st.textContent="Start here. "; nx.appendChild(st);}
+      nx.appendChild(document.createTextNode(NEXT[p.key][level(pct)]));
+      el.appendChild(top); el.appendChild(bar); el.appendChild(nx); box.appendChild(el);
+    });
+    show("results");
+    send();
+  }
+
+  function send(){
+    var msg=$("sent");
+    var payload={name:who.name,email:who.email,org:who.org,role:who.role,website:who.website,answers:answers};
+    if(ENDPOINT.indexOf("http")!==0){msg.textContent="Your results are below. (Email delivery is being set up.)";return;}
+    fetch(ENDPOINT,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(payload)})
+      .then(function(){msg.className="sent";msg.textContent="Done! We emailed a copy of your results to "+who.email+". If you don't see it in a few minutes, check your spam or promotions folder.";})
+      .catch(function(){msg.className="sent wait";msg.textContent="Your results are below. We couldn't send the email just now; you can write to info@dalereports.com and we'll send them.";});
+  }
+})();
+</script>
+</body>
+</html>
